@@ -80,4 +80,6 @@ nav li {display: inline-block}
 .DEPTO1 div:hover img {opacity: 0,5;}
 .DEPTO2 div:hover img {opacity: 0,5;}
 .Opciones div {width:100%;}
+.imagenes ul a{width:100%}
+ul a,ul li{width:100%}
 }
