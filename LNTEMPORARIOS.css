@@ -55,6 +55,23 @@ nav {display: none}
 .Opciones {display: flex;flex-flow: wrap;}
 .Opciones div {width:33.3%;}
 .Opciones img {width:100%;}
+.anuncio-amigo {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.anuncio-amigo iframe {
+    max-width: 728px;
+    height: 90px;
+    border: none;
+}
+
+@media (max-width: 480px) {
+    .anuncio-amigo iframe {
+        width: 300px;
+        height: 600px;
+    }
+}
 
 @media (max-width:768px) {
 nav {display: none}
