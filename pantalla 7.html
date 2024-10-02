@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> LN TEMPORARIOS </title>
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="LNTEMPORARIOS.css">
+</head>
+
+<body>
+	<header>	
+	<a href="#" onclick="Barra()" class="icono"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+	<p class="texto-blanco">
+	<nav id= "navegador" class="mostar">
+	<h2>
+		<ul>	
+		<li><a href="Registrate.html"> Registrate </a></li>
+		<link rel="stylesheet" href="Registrate.html">
+		</ul>
+		<ul>
+		<li><a href="Departamento 1"class="ele1"> Quiero reservar</a></li>
+			<li><a href="Departamento 2"class="ele2"> Quiero publicar</a></li>
+			<li><a href="Departamento 3"class="ele3"> Otras preguntas</a></li>
+		</ul>
+	</h2>
+	</nav>
+		<nav>
+		<ul>
+		<li><a href="Departamento 1"class="ele1"> Quiero reservar</a></li>
+			<li><a href="Departamento 2"class="ele2"> Quiero publicar</a></li>
+			<li><a href="Departamento 3"class="ele3"> Otras preguntas</a></li>
+		</ul>
+		</nav>
+<nav>
+		<ul>
+			<li><a href="Donde" class="preg1"> ¿Donde quieres el alojamiento?</a></li> 
+			<li><a href="Que" class="preg2"> ¿Que tipo de propiedad?</a></li>
+		</ul>
+	</nav>
+	<h1>LN TEMPORARIOS</h1> 	
+	<a href="index.html"><img src="LN LOGOS.png"alt="LOGO"class="logo"></a>
+
+	<nav>
+		<ul>	
+		<li><a href="pantalla 7.html"> Otras preguntas </a></li>
+		</ul>
+	</nav>	
+
+	     <h1>Preguntas</h1>
+    <form action="#" method="post">
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escribe tu comentario aquí..."></textarea><br>
+        <button type="submit">Enviar</button>
+    </form>
+    
+		<ul>
+			<p class="texto-blanco">
+			<li><a href="Mail"class="Mail"> Mail: lntemporarios@gmial.com</a></li>
+			<li><a href="Whatsapp"class="Wapp"> Tel: 11 4188-5742</a></li>
+			<li><a href="Intagram"class="Insta"> @Lntemporarios</a></li>
+			</p>
+		</ul>
+
+</header>
+<script>
+function Barra() {
+       // aquí se define el ID del elemento que va a tomar la clase
+     var x = document.getElementById("navegador");
+     if (x.className === " ") {
+         // esta es la clase que se agrega al elemento con eo id="navegador"
+       x.className += "mostrar";
+     } else {
+       x.className = " ";
+     }
+   }
+</script>
+</body>
+</html>
