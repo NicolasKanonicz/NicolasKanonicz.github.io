@@ -1,60 +1,135 @@
-* {margin: 0; padding: 0;}
-body{
-	color: black;
-	background-color: white;}
-.entrada {text-align: center;}
+/* 1. RESET Y ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño del elemento */
+}
+
+body {
+    color: #333; /* Color de texto más suave */
+    background-color: white;
+    font-family: 'Lora', serif; /* Elegante y con serifas */
+    line-height: 1.6; /* Mejora la legibilidad */
+    padding: 0;
+    margin: 0;
+}
+
+/* 2. TIPOGRAFÍA Y FUENTES */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif; /* Fuente con serifas para títulos */
+    color: #222;
+}
+
+p, ul, li, a {
+    font-family: 'Open Sans', sans-serif; /* Fuente limpia y moderna */
+    color: #333;
+}
+
+/* 3. ESTILOS DEL ENCABEZADO (header) */
+header {
+    text-align: center;
+    padding: 70px 0 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-family: 'Merriweather', serif;
+    color: #222;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.nico, .lucas {
+    width: 100%; /* Ajuste para asegurar que las imágenes se ajusten correctamente */
+}
+
+/* 4. ESTILOS DEL NAVEGADOR */
+nav {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
+
+.Opciones {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.Opciones div {
+    width: 33.3%;
+}
+
+.Opciones img {
+    width: 100%;
+}
+
+/* 5. ENLACES Y LISTAS */
 ul {
-    list-style-type: none; /* Eliminar puntos de la lista */
-    padding: 0; /* Eliminar padding */
-    margin: 0; /* Eliminar margen */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-image: url("FONDOS.jpg");
+    opacity: 100%;
 }
 
 ul a {
-    display: block; /* Hacer que el enlace ocupe todo el bloque */
-    width: 33.3%; /* Ancho de cada imagen (ajústalo según sea necesario) */
-    margin: 20px auto; /* Margen automático para centrar en la página */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para efectos */
-    position: relative; /* Para el efecto de alternar */
-}
-
-ul a img {
-    width: 100%; /* Hacer que la imagen ocupe el 100% del ancho del bloque */
-    height: auto; /* Mantener la relación de aspecto */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    display: block;
+    width: 33.3%;
+    margin: 20px auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none; /* Eliminar subrayado en los enlaces */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 ul a:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el ratón */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-header{text-align: center;}
-.logo{float: center;}
-.logo{width: 300px;}
-.nico{width: 399px;}
-.lucas{width: 361px;}
-.imagenes ul{display:flex;flex-flow: wrap}
-.DEPTO1{width: 400px; }
-.DEPTO2{width: 400px;}
-.Registrate{color: black;}
-.SOMOS{text-align: center;}
-.friend{text-align: left;}
-header h1{text-align: center;padding-top:70px} 
-form {background-image: url("FONDOS.jpg");opacity: 100%}
-.Registrate{position: absolute;right: 30px;top: 0px;z-index: 0}
-ul {background-image: url("FONDOS.jpg");opacity: 100%}
- ul li {padding: 10px; color: white;display: inline-block; width: 33%;box-sizing: border-box;} 
-a {color: white;}
-.fa {color: black;
-		float: right;}
-nav {display: none}
-.mostrar {display: block}
-.icono {position: absolute;z-index: 1; right: 0;}
-.texto-blanco {bottom: 0px;}
-.Opciones {display: flex;flex-flow: wrap;}
-.Opciones div {width:33.3%;}
-.Opciones img {width:100%;}
+ul li {
+    padding: 10px;
+    color: white;
+    display: inline-block;
+    width: 33%;
+    box-sizing: border-box;
+}
+
+/* 6. IMÁGENES */
+ul a img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagenes ul {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.DEPTO1, .DEDTO2 {
+    width: 400px;
+}
+
+.DEPTO1 div:hover img, .DEDTO2 div:hover img {
+    opacity: 0.5;
+}
+
+/* 7. FORMULARIO */
+form {
+    background-image: url("FONDOS.jpg");
+    opacity: 100%;
+}
+
+/* 8. ANUNCIOS Y OTROS ELEMENTOS */
 .anuncio-amigo {
     margin: 20px 0;
     text-align: center;
@@ -73,13 +148,60 @@ nav {display: none}
     }
 }
 
-@media (max-width:768px) {
-nav {display: none}
-nav li {display: inline-block}
-.mostrar {display: block}
-.DEPTO1 div:hover img {opacity: 0,5;}
-.DEPTO2 div:hover img {opacity: 0,5;}
-.Opciones div {width:100%;}
-.imagenes ul a{width:100%}
-ul a,ul li{width:100%}
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    nav li {
+        display: inline-block;
+    }
+    .mostrar {
+        display: block;
+    }
+    .DEDTO1 div:hover img, .DEDTO2 div:hover img {
+        opacity: 0.5;
+    }
+    .Opciones div {
+        width: 100%;
+    }
+    .imagenes ul a {
+        width: 100%;
+    }
+    ul a, ul li {
+        width: 100%;
+    }
 }
+
+/* 9. POSICIONES Y OTROS AJUSTES */
+.Registrate {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    z-index: 0;
+}
+
+.friend {
+    text-align: left;
+}
+
+.SOMOS, .entrada {
+    text-align: center;
+}
+
+.texto-blanco {
+    bottom: 0px;
+}
+
+.icono {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+}
+
+.fa {
+    color: black;
+    float: right;
+}
+
