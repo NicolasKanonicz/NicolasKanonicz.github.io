@@ -1,4 +1,4 @@
-/* 1. RESET Y ESTILOS GENERALES */
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +28,6 @@ p, ul, li, a {
 /* 3. ESTILOS DEL ENCABEZADO (header) */
 header {
     text-align: center;
-    padding: 70px 0 20px;
 }
 
 header h1 {
@@ -205,3 +204,14 @@ form {
     float: right;
 }
 
+ label {
+    color: white;
+}
+.CEO img 
+{
+    width: 40%; margin: 4%;
+}
+
+.CEO{
+    display:flex; ;
+}
