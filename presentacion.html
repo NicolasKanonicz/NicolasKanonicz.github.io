@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LN</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <body>
+        <div id="presentationCarousel" class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div>
+                        <h1>LN TEMPORARIOS</h1>
+                        <h2>Nicolas Kanonicz</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div>
+                        <h1>¿De que se trata el proyecto?</h1>
+                        <h2>El objetivo de la página es poder centralizar la información y que tanto las reservas como la publicación de un departamento se pueda realizar dentro de esta misma</h2>
+                    </div>
+                </div>
+                <!-- SI QUERES CREAR UNA DIAPOSITIVA -->
+                <div class="carousel-item">
+                    <div>
+                        <h1>Registrate/Otras preguntas</h1>
+                        <h2>Esta sección sirve para realizar un seguimiento de las personas que quieran obtener más información acerca de algún item y consultas adicionales.</h2>
+                    </div>
+                </div>
+                <!-- SI QUERES CREAR UNA DIAPOSITIVA -->
+                <div class="carousel-item">
+                    <div>
+                       <img src="footer.jpg" class="imagenpresentacion">
+                    </div>
+                </div>
+                <!-- SI QUERES CREAR UNA DIAPOSITIVA -->
+                <div class="carousel-item">
+                    <div>
+                       <img src="nico1.jpeg" class="imagenpresentacion">
+                    </div>
+                </div>
+                <!-- SI QUERES CREAR UNA DIAPOSITIVA -->
+                <div class="carousel-item">
+                    <div>
+                        <h1>Link al Sitio Web</h1>
+                        <a href="https://nicolaskanonicz.github.io/" class="btn">Visita el Sitio</a>
+                    </div>
+                </div>
+                <!-- Continúa con el resto de los elementos, todos con la clase .carousel-item -->
+            </div>
+            <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+                box-sizing: border-box;
+            }
+    
+    
+            .carousel {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+            }
+            h1 {font-size: 90px;color: #65350f}
+		h2 {font-size: 25px;}
+		h3 {font-size: 10px;}
+		h2 {font-size: 25px;}
+		h4 {font-size: 25px;}
+		ul {list-style: none;}
+            
+            .carousel-inner {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                width: 100%;
+            }
+    
+            .carousel-item {
+                min-width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .carousel-control-prev, .carousel-control-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                border: none;
+                color: white;
+                font-size: 2em;
+                cursor: pointer;
+                padding: 10px;
+            }
+    
+            .carousel-control-prev {
+                left: 10px;
+            }
+    
+            .carousel-control-next {
+                right: 10px;
+            }
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #65350f;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+        background-color: #a24e1b;
+        transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+
+
+        </style>
+    
+        <script>
+            let currentIndex = 0;
+            const items = document.querySelectorAll('.carousel-item');
+            
+            function updateCarousel() {
+                const carouselInner = document.querySelector('.carousel-inner');
+                carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+    
+            function prevSlide() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                updateCarousel();
+            }
+    
+            function nextSlide() {
+                currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            }
+        </script>
+    </body>
+    
+	
+</html>
